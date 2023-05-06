@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./GoodsPage.css";
 import apiService from "../../services/api.service";
 import { Audio } from "react-loader-spinner";
@@ -16,7 +17,8 @@ function GoodsPage() {
     });
   }, []);
 
-  const handleClick = (id) => {
+  const handleClick = (event,id) => {
+    event.preventDefault();
     apiService.getPhoneById(id).then((phone) => {
       console.log(phone.data)
       setActivePhone(phone.data);
@@ -28,7 +30,7 @@ function GoodsPage() {
       <h1>Available models:</h1>
       <div className="allGoods">
       
-      {allPhones ? (allPhones.map((phone) => <Button key={phone.name} onClick={() => handleClick(phone._id)}>{phone.name}</Button>))
+      {allPhones ? (allPhones.map((phone) => <Button variant="light" style={{"width":"100%"}} key={phone.name} onClick={(e) => handleClick(e,phone._id)}>{phone.name}</Button>))
         : (
           <Audio
             height="30"
@@ -40,7 +42,7 @@ function GoodsPage() {
           />
         )}
       </div>
-
+        
       <div className="goodDetails">
         {activePhone ? (
           <MerchandiseDetails phone={activePhone} />  

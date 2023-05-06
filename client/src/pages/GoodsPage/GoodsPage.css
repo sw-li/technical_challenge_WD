@@ -1,0 +1,33 @@
+.allGoods{
+    display: flex;
+    justify-content: space-around;
+    gap:10px;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 20vh;
+    overflow-y: scroll;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.goodDetails{
+    
+    display: flex;
+    justify-content: space-around;
+    gap:10px;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    overflow-y: scroll;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
