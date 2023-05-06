@@ -40,7 +40,7 @@ const phoneSchema = new Schema(
       required: [true, "Processor info is required."],
     },
     ram: {
-      type: String,
+      type: Number,
       required: [true, "Ram info is required."],
     },
   },
@@ -50,4 +50,4 @@ const phoneSchema = new Schema(
   }
 );
 
-module.exports = model("Phone", userSchema);
+module.exports = model("Phone", phoneSchema);
