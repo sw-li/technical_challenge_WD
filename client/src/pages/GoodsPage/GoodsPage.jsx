@@ -30,7 +30,7 @@ function GoodsPage() {
       <h1>Available models:</h1>
       <div className="allGoods">
       
-      {allPhones ? (allPhones.map((phone) => <Button variant="light" style={{"width":"100%"}} key={phone.name} onClick={(e) => handleClick(e,phone._id)}>{phone.name}</Button>))
+      {allPhones ? (allPhones.map((phone) => <Button variant="primary" style={{"width":"100%"}} key={phone.name} onClick={(e) => handleClick(e,phone._id)}>{phone.name}</Button>))
         : (
           <Audio
             height="30"

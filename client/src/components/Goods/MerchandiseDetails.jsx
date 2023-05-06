@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap";
 import "./MerchandiseDetails.css";
 import Card from 'react-bootstrap/Card';
 
@@ -8,7 +9,7 @@ const MerchandiseDetails = (props) => {
     return (
 
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={require(`../../images/${imageFileName}`)} />
+      <Card.Img variant="top" style={{height:"200px"}} src={require(`../../images/${imageFileName}`)} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text className="details">
@@ -19,6 +20,7 @@ const MerchandiseDetails = (props) => {
           <p> <b>Screen:</b>  {screen}</p>
           <p> <b>Processor:</b>  {processor}</p>
           <p> <b>Ram:</b>  {ram}</p>
+          <Button variant="success">Add to cart</Button>
         </Card.Text>
 
       </Card.Body>

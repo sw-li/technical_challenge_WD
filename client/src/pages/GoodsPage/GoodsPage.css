@@ -6,7 +6,7 @@
     align-items: center;
     margin: 0 auto;
     width: 80%;
-    height: 20vh;
+    height: 25vh;
     overflow-y: scroll;
     max-width: 1200px;
     padding: 0 20px;
@@ -24,10 +24,19 @@
     align-items: center;
     margin: 0 auto;
     width: 80%;
-    overflow-y: scroll;
     max-width: 1200px;
     padding: 0 20px;
     box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+h1{
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 0.8rem;
 }
